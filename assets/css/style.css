@@ -1,4 +1,11 @@
-body {
-    background-image: url("../images/blue-crystals.jpg");
+
+.jumbotron {
+    background-image: url("../images/-dumbledore.png");
     background-size: cover;
+}
+
+h1 {
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
 }

@@ -17,19 +17,76 @@
 
 <body>
 
-    <div class="container">
+    <div class="container-fluid">
 
         <div class="jumbotron">
             <h1 class="display-4"> Chrystal Collector !</h1>
             <hr class="my-4">
-            <a class="btn btn-sm btn-outline-primary" href="#" role="button"> Play For Aura! </a>
-            <a class="btn btn-sm btn-outline-secondary" href="#" role="button"> Pause Audio </a>
+            <a class="btn btn-sm btn-primary" href="#" role="button"> Play Theme ! </a>
+            <a class="btn btn-sm btn-secondary" href="#" role="button"> Pause Audio </a>
         </div>
+    </div>
 
+    <div class="container-fluid">
         <div class="row">
+            <div class="col-md-5">
+                <div class="row">
+                    <div class="card col-md-12 m-1">
+                        <h5 class="card-header">How to play ? </h5>
+                        <div class="card-body">
+                            <p class="card-text ul">
+                                <li> The Durmstrang School of wizardary is giving a target for hogwarts to meet </li>
+                                <li> Click on house crests to contribute to the score </li>
+                                <li>Keep clicking till you reach the exact target score </li>
+                                <li>If you go above the target you'll lose </li>
+                            </p>
+                        </div>
+                    </div>
+                    <!-- <div class="col-md-12 m-1 border border-secondary">
+                        <p> How to play ?</p>
+                        <p>The Durmstrang School of wizardary is giving a target for hogwarts to meet <br>
+                         Click on house crests to contribute to the score 
+                         Keep clicking till you reach the exact target score 
+                        If you go above the target you'll lose </p>
+                    </div> -->
+                </div>
+                <div class="row">
+                    <div class="card col-md-12 m-1 ">
+                        <h5 class="card-header"> Scoreboard </h5>
+                        <div class="card-body">
+                            <div> Durmstrang challeges you with target : <span id="target-score"></span>
+                            </div>
+                            <div> Your score : <span id="user-score"></span></div>
+                        </div>
+                        <!-- <div class="col-md-12 m-1 border border-secondary">
+                        <p> Scoreboard </p>
+                    </div> -->
+                    </div>
+                </div>
 
-            <div id="gems-pics" class="col-md-6">
-                
+                <div class="col-md-7">
+                    <div class="row">
+                        <div id="red-image" class="col-md-6">
+
+                        </div>
+                        <div id="blue-image" class="col-md-6">
+
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div id="green-image" class="col-md-6">
+
+                        </div>
+                        <div id="yellow-image" class="col-md-6">
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
             </div>
         </div>
 
