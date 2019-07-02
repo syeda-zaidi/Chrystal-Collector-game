@@ -5,17 +5,16 @@
     <title>
         Crystal Collector Game
     </title>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="assets/javascript/game.js"></script>
+
 </head>
 
 <body>
+
 
     <div class="container-fluid">
 
@@ -42,58 +41,65 @@
                             </p>
                         </div>
                     </div>
-                    <!-- <div class="col-md-12 m-1 border border-secondary">
-                        <p> How to play ?</p>
-                        <p>The Durmstrang School of wizardary is giving a target for hogwarts to meet <br>
-                         Click on house crests to contribute to the score 
-                         Keep clicking till you reach the exact target score 
-                        If you go above the target you'll lose </p>
-                    </div> -->
                 </div>
+
                 <div class="row">
                     <div class="card col-md-12 m-1 ">
                         <h5 class="card-header"> Scoreboard </h5>
                         <div class="card-body">
-                            <div> Durmstrang challeges you with target : <span id="target-score"></span>
+                            <div> Durmstrang challeges you with target : <span id="target-score" class="stats"></span>
                             </div>
-                            <div> Your score : <span id="user-score"></span></div>
+                            <div> Your score : <span id="user-score" class="stats"></span></div>
                         </div>
-                        <!-- <div class="col-md-12 m-1 border border-secondary">
-                        <p> Scoreboard </p>
-                    </div> -->
                     </div>
                 </div>
 
-                <div class="col-md-7">
-                    <div class="row">
-                        <div id="red-image" class="col-md-6">
-
-                        </div>
-                        <div id="blue-image" class="col-md-6">
-
+                <div class="row">
+                    <div class="card col-md-12 m-1">
+                        <h5 class="card-header"> Standings </h5>
+                        <div class="card-body">
+                            <div> Yayy! You won this many times : <span id="wins" class="stats"></span></div>
+                            <div> oops.. You've lost this many times : <span id="losses" class="stats"></span></div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div id="green-image" class="col-md-6">
-
-                        </div>
-                        <div id="yellow-image" class="col-md-6">
-
-                        </div>
-
-                    </div>
-
                 </div>
-
-
-
             </div>
+
+            <div class="col-md-7">
+                <div class="row">
+
+                    <div class="col-md-6 text-center mb-3">
+                        <img id="red-image" class="crestimg" src="assets/images/Gryffindor-flag.jpg" width="250px"
+                            height="250px">
+                    </div>
+
+                    <div class="col-md-6 ">
+                        <img id="blue-image" class="crestimg" src="assets/images/ravenclaw_flag_full.jpg" width="250px"
+                            height="250px">
+                    </div>
+                </div>
+
+                <div class="row">
+
+                    <div class="col-md-6 text-center ">
+                        <img id="green-image" class="crestimg" src="assets/images/Best-Slytherin-flag.jpg" width="250px"
+                            height="250px">
+                    </div>
+
+                    <div class="col-md-6">
+                        <img id="yellow-image" class="crestimg" src="assets/images/hufflepuff_flag.jfif" width="250px"
+                            height="250px">
+                    </div>
+                </div>
+            </div>
+
+
         </div>
-
-
-
     </div>
-
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="assets/javascript/game.js"></script>
 </body>
 
 </html>
