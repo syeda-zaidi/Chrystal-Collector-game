@@ -9,42 +9,39 @@ $(document).ready(function () {
     updateStats();
 
     function startgamefunction() {
-        $("#red-image").attr("value", Math.floor(Math.random() * 101) + 19);
-        $("#blue-image").attr("value", Math.floor(Math.random() * 101) + 19);
-        $("#green-image").attr("value", Math.floor(Math.random() * 101) + 19);
-        $("#yellow-image").attr("value", Math.floor(Math.random() * 101) + 19)
+        $("#red-image").attr("data-value", (Math.floor(Math.random() * 11) + 1));
+        $("#blue-image").attr("data-value", (Math.floor(Math.random() * 11) + 1));
+        $("#green-image").attr("data-value", (Math.floor(Math.random() * 11) + 1));
+        $("#yellow-image").attr("data-value", (Math.floor(Math.random() * 11) + 1));
     }
-    startgamefunction()
-    // var randomNum = (19 + Math.random * (120 - 19 + 1));
-    // console.log(randomNum);
+    startgamefunction();
+
 
     $(".crestimg").on("click", function () {
-        var imgvalue = $(this).val()
-        userScore += imgvalue
-        console.log($(this.value))
-            ; alert("your new score is : " + userScore);
+        var imageValue = $(this).data("value");
+        userScore += imageValue
+        console.log(imageValue);
+        updateStats();
+        checkScore();
     });
 
-    // $("#blue-image").on("click", function () {
-    //     alert("you clicked ravenclaw house crest");
-    //     userScore += 5;
-    //     alert("your new score is : " + userScore);
+    function checkScore() {
+        if (userScore === randomNum) {
+            wins++;
+            resetGame();
+            updateStats();
+        } else if (userScore > randomNum) {
+            losses++;
+            resetGame();
+            updateStats();
+        }
+    }
 
-    // });
+    function resetGame() {
+        randomNum = Math.floor(Math.random() * (101) + 19);
+        userScore = 0;
+    }
 
-    // $("#green-image").on("click", function () {
-    //     alert("you clicked slytherin house crest");
-    //     userScore += 7;
-    //     alert("your new score is : " + userScore);
-
-    // });
-
-    // $("#yellow-image").on("click", function () {
-    //     alert("you clicked hufflepuff house crest");
-    //     userScore += 3;
-    //     alert("your new score is : " + userScore);
-
-    // });
 
     function updateStats() {
         $("#target-score").text(randomNum);
@@ -53,8 +50,14 @@ $(document).ready(function () {
         $("#losses").text(losses);
     }
 
-
-
-
+    var audio = document.getElementById("#theme-audio")
+    $(".playaudio").on("click", function () {
+        // var audio = document.getElementById("#theme-audio")
+        console.log(audio);
+        audio.play();
+    });
+    $(".pauseaudio").on("click", function () {
+        audio.pause();
+    });
 
 });
