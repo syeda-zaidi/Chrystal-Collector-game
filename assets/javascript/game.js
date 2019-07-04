@@ -8,14 +8,33 @@ $(document).ready(function () {
     console.log(randomNum);
     updateStats();
 
-    function startgamefunction() {
+    // var Images = {
+    //     redImage: {
+    //         value: 0,
+    //     },
+    //     blueImage: {
+    //         value: 0,
+    //     },
+    //     greenImage: {
+    //         value: 0,
+    //     },
+    //     yellowImage: {
+    //         value: 0,
+    //     }
+    // };
+
+    function startGameFunction() {
+        // Images.redImage.value = (Math.floor(Math.random() * 11) + 1);
+        // Images.blueImage.value = (Math.floor(Math.random() * 11) + 1);
+        // Images.greenImage.value = (Math.floor(Math.random() * 11) + 1);
+        // Images.yellowImage.value = (Math.floor(Math.random() * 11) + 1);
+
         $("#red-image").attr("data-value", (Math.floor(Math.random() * 11) + 1));
         $("#blue-image").attr("data-value", (Math.floor(Math.random() * 11) + 1));
         $("#green-image").attr("data-value", (Math.floor(Math.random() * 11) + 1));
         $("#yellow-image").attr("data-value", (Math.floor(Math.random() * 11) + 1));
-    }
-    startgamefunction();
-
+    };
+    startGameFunction();
 
     $(".crestimg").on("click", function () {
         var imageValue = $(this).data("value");
@@ -40,6 +59,7 @@ $(document).ready(function () {
     function resetGame() {
         randomNum = Math.floor(Math.random() * (101) + 19);
         userScore = 0;
+        startGameFunction();
     }
 
 
@@ -50,14 +70,16 @@ $(document).ready(function () {
         $("#losses").text(losses);
     }
 
-    var audio = document.getElementById("#theme-audio")
-    $(".playaudio").on("click", function () {
-        // var audio = document.getElementById("#theme-audio")
-        console.log(audio);
-        audio.play();
-    });
-    $(".pauseaudio").on("click", function () {
-        audio.pause();
-    });
+    
+    // var themeAudio = document.createElement("audio");
+    // themeAudio.setAttribute("src", "assets\images\Harry Potter Theme Song.mp3");
+
+    // $(".playaudio").on("click", function() {
+    //     themeAudio.play();
+    // });
+
+    // $(".pauseaudio").on("click", function() {
+    //     themeAudio.pause();
+    // });
 
 });
