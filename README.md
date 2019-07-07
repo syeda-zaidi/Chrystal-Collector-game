@@ -1,6 +1,6 @@
 # unit-4-game 
 
-THE GEM COLLECTOR Game 
+THE CHRYSTAL COLLECTOR Game 
 
 live link to the game : https://syeda-zaidi.github.io/unit-4-game/
 
