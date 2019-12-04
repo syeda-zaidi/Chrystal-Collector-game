@@ -2,7 +2,7 @@
 
 THE CHRYSTAL COLLECTOR Game 
 
-live link to the game : https://syeda-zaidi.github.io/unit-4-game/
+live link to the game : https://syeda-zaidi.github.io/Chrystal-Collector-game/
 
 The game starts with durmstrang schools of wizards giving a target score, which the player has to meet by scoring house points for Hogwarts. 
 
